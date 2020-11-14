@@ -36,4 +36,10 @@ public class homePage {
         return cartItemCount.getText();
     }
 
+    @FindBy(how = How.XPATH,using = "/html/body/div[1]/header/div[1]/div/ul/li[1]/span")
+    WebElement welcomeMessage;
+    public String getWelcomeMessage(){
+        return welcomeMessage.getText();
+    }
+
 }

@@ -53,5 +53,11 @@ public class createAccountPage {
         createAccountButton.click();
     }
 
+    @FindBy(how = How.XPATH,using = "//*[@id=\"maincontent\"]/div[2]/div[2]/div/div/div")
+    WebElement validationMessage;
+    public String getValidationMessage(){
+        return validationMessage.getText();
+    }
+
 
 }

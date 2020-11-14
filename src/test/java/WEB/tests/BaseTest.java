@@ -19,13 +19,26 @@ public class BaseTest {
         driver.get(WebURL);
         System.out.println("Before method");
     }
+
     //data provider for registration
-    @DataProvider(name = "Data_Provider")
+    //data format first name, last name, email, password
+    @DataProvider(name = "Data_Provider_1")
     public Object[] [] dataProvider() {
         return new Object[] [] {
-                {"1234","Melbourne VIC, Australia","80000","Ishara","Chaminda","0772586662","test@villvay.com"}
+                {"ixa","cham","ixa@gmail.com","Sdet1234"},
+                {"ixaa","chama","ixaa@gmail.com","Sdet1234"}
         };
     }
+
+    //data provider for login and same email reuse
+    //data format first name, last name, email, password
+    @DataProvider(name = "Data_Provider_2")
+    public Object[] [] dataProvider2() {
+        return new Object[] [] {
+                {"ishara","chaminda","isa.chamin@gmail.com","Sdet1234"}
+        };
+    }
+
     @AfterMethod
     void after(){
         driver.close();
