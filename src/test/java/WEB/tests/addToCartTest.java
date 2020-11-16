@@ -11,16 +11,16 @@ import WEB.pages.loginPage;
 import WEB.pages.productPage;
 
 public class addToCartTest extends BaseTest{
-    @Test
-    void addToCart() throws InterruptedException {
+    @Test(dataProvider = "Data_Provider_2")
+    void addToCartTest(String fname, String lname, String email, String pass) throws InterruptedException {
         int cartItemsBefore;
         homePage home = PageFactory.initElements(driver,homePage.class);
         loginPage login = PageFactory.initElements(driver,loginPage.class);
         productPage prod = PageFactory.initElements(driver,productPage.class);
 
         home.clickSignIn();
-        login.fillEmail("isa.chamin@gmail.com");
-        login.fillPassowrd("Sdet1234");
+        login.fillEmail(email);
+        login.fillPassowrd(pass);
         login.clickSignInButton();
         Thread.sleep(2000);
         try {
@@ -32,15 +32,15 @@ public class addToCartTest extends BaseTest{
         prod.clickSizeMedium();
         prod.clickColourBlue();
         prod.clickAddToCartButton();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         int cartItems = Integer.valueOf(home.getCartItemCount());
-        //System.out.println(cartItemsBefore);
-        //System.out.println(cartItems);
+        System.out.println(cartItemsBefore);
+        System.out.println(cartItems);
         Thread.sleep(5000);
     }
 
     @Test
-    void guestAddTocart() throws InterruptedException {
+    void guestAddTocartTest() throws InterruptedException {
         homePage home = PageFactory.initElements(driver,homePage.class);
         loginPage login = PageFactory.initElements(driver,loginPage.class);
         productPage prod = PageFactory.initElements(driver,productPage.class);
@@ -50,6 +50,7 @@ public class addToCartTest extends BaseTest{
         prod.clickAddToCartButton();
         Thread.sleep(3000);
         int cartItems = Integer.valueOf(home.getCartItemCount());
+        System.out.println(cartItems);
         Assert.assertEquals(cartItems,1);
         Thread.sleep(5000);
     }

@@ -25,8 +25,7 @@ public class BaseTest {
     @DataProvider(name = "Data_Provider_1")
     public Object[] [] dataProvider() {
         return new Object[] [] {
-                {"ixa","cham","ixa@gmail.com","Sdet1234"},
-                {"ixaa","chama","ixaa@gmail.com","Sdet1234"}
+                {"ixi","chami","ixai@gmail.com","Sdet1234"}
         };
     }
 
