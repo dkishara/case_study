@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/home/ishara/Case_study">
+        <classes>
+            <class name="WEB.tests.loginTest">
+                <methods>
+                    <include name="loginTest"/>
+                </methods>
+            </class>
+            <class name="WEB.tests.addToCartTest">
+                <methods>
+                    <include name="addToCartTest"/>
+                    <include name="guestAddTocartTest"/>
+                </methods>
+            </class>
+            <class name="WEB.tests.createAccount">
+                <methods>
+                    <include name="createAccountTest"/>
+                    <include name="sameEmailRegiterTest"/>
+                </methods>
+            </class>
+            <class name="API.Magento2API">
+                <methods>
+                    <include name="outh"/>
+                    <include name="test1"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -8,7 +8,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 public class Magento2API {
-
+    //Test to generate new access token
     @Test
     public void outh(){
 
@@ -22,11 +22,8 @@ public class Magento2API {
                     .then()
                     .statusCode(200)
                     .extract().header("access_token");
-
     }
-
-
-
+    //Test to authenticate and get list
     @Test(priority=1)
     public void test1() {
         baseURI = "https://m2.leanscale.com/";

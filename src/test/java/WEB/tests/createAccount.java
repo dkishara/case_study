@@ -8,7 +8,7 @@ import WEB.pages.createAccountPage;
 import WEB.pages.myAccountPage;
 
 public class createAccount extends BaseTest{
-
+    //Test to Create Account
     @Test(dataProvider = "Data_Provider_1")
     void createAccountTest(String fname, String lname, String email, String pass) throws InterruptedException {
         homePage home = PageFactory.initElements(driver,homePage.class);
@@ -26,6 +26,7 @@ public class createAccount extends BaseTest{
         Assert.assertTrue(emaildata.contains(email));
         Thread.sleep(2000);
     }
+    //Test to Create Account With Previously Used Email
     @Test(dataProvider = "Data_Provider_2")
     void sameEmailRegiterTest(String fname, String lname, String email, String pass) throws InterruptedException {
         homePage home = PageFactory.initElements(driver,homePage.class);

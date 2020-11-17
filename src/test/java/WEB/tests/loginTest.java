@@ -8,7 +8,8 @@ import WEB.pages.homePage;
 import WEB.pages.loginPage;
 
 public class loginTest extends BaseTest{
-    @Test(dataProvider = "Data_Provider")
+    //Test main login
+    @Test(dataProvider = "Data_Provider_2")
     void loginTest(String fname, String lname, String email, String pass) throws InterruptedException {
         homePage home = PageFactory.initElements(driver,homePage.class);
         loginPage login = PageFactory.initElements(driver,loginPage.class);

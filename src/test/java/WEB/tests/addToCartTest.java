@@ -11,6 +11,7 @@ import WEB.pages.loginPage;
 import WEB.pages.productPage;
 
 public class addToCartTest extends BaseTest{
+    //Login And Add to Cart Test
     @Test(dataProvider = "Data_Provider_2")
     void addToCartTest(String fname, String lname, String email, String pass) throws InterruptedException {
         int cartItemsBefore;
@@ -38,7 +39,7 @@ public class addToCartTest extends BaseTest{
         System.out.println(cartItems);
         Thread.sleep(5000);
     }
-
+    //Guest User Add to Cart Test
     @Test
     void guestAddTocartTest() throws InterruptedException {
         homePage home = PageFactory.initElements(driver,homePage.class);
