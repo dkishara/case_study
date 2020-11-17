@@ -25,7 +25,7 @@ public class BaseTest {
     @DataProvider(name = "Data_Provider_1")
     public Object[] [] dataProvider() {
         return new Object[] [] {
-                {"isaa","chamii","ixa123@gmail.com","Sdet1234"}
+                {"isaass","chamiiss","ixas1234@gmail.com","Sdet1234"}
         };
     }
 
@@ -34,7 +34,10 @@ public class BaseTest {
     @DataProvider(name = "Data_Provider_2")
     public Object[] [] dataProvider2() {
         return new Object[] [] {
-                {"ishara","chaminda","isa.chamin@gmail.com","Sdet1234"}
+                {"ishara","chaminda","isa.chamin@gmail.com","Sdet1234"},
+                {"ixa","cham","ixa@gmail.com","Sdet1234"},
+                {"ixaa","chama","ixaa@gmail.com","Sdet1234"},
+                {"ixi","chami","ixai@gmail.com","Sdet1234"}
         };
     }
 
